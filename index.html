@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>鹈鹕海岸单车 · Pelican Bicycle Kinematics</title>
+  <meta name="description" content="基于实时 2-Bone 逆向运动学（IK）、精确齿轮切线链条与程序化 Web Audio 音效的鹈鹕骑自行车交互式海岸漫游项目。" />
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div>
+        <h1>鹈鹕海岸单车</h1>
+        <p class="subtitle">2-Bone 逆向运动学 · 精确链条切线 · Verlet 丝巾 · 程序化海岸音效</p>
+      </div>
+      <div class="kbd-hints" aria-label="快捷键提示">
+        <span><kbd>Space</kbd> 跳跃吞鱼</span>
+        <span><kbd>W</kbd> 翘头</span>
+        <span><kbd>B</kbd> 车铃</span>
+        <span><kbd>K</kbd> 工程透视</span>
+      </div>
+    </header>
+
+    <section class="stage-wrap" aria-label="鹈鹕骑行画布">
+      <canvas id="pelican-canvas"></canvas>
+    </section>
+
+    <section class="controls" aria-label="骑行控制面板">
+      <label class="speed-control" for="speed-range">
+        <span>巡航速度</span>
+        <input id="speed-range" type="range" min="60" max="320" value="170" />
+      </label>
+
+      <div class="btn-group">
+        <button id="btn-jump" type="button" class="btn primary">跳跃吞鱼</button>
+        <button id="btn-wheelie" type="button" class="btn">翘头</button>
+        <button id="btn-bell" type="button" class="btn">叮铃</button>
+        <button id="btn-xray" type="button" class="btn">工程透视 IK</button>
+        <button id="btn-time" type="button" class="btn">晴空海岸</button>
+        <button id="btn-audio" type="button" class="btn">开启音效</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
